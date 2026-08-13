@@ -2,8 +2,6 @@
 
 set -e
 
-APPIMAGE_VERSION="13"
-
 umask 022
 
 source binaries/.jdk-versions.sh
@@ -60,8 +58,8 @@ popd
 
 # Download appimagetool
 if ! [ -f appimagetool-x86_64.AppImage ] ; then
-  curl -Lo appimagetool-x86_64.AppImage \
-    https://github.com/AppImage/AppImageKit/releases/download/$APPIMAGE_VERSION/appimagetool-x86_64.AppImage
+  curl -fL -o appimagetool-x86_64.AppImage \
+    https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
   chmod +x appimagetool-x86_64.AppImage
 fi
 
