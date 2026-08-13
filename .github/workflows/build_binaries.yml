@@ -83,7 +83,7 @@ jobs:
           if-no-files-found: error
 
   linux:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: ${{ inputs.platform == 'Linux' || inputs.platform == 'All platforms' }}
     steps:
       - uses: actions/checkout@v4
@@ -140,7 +140,7 @@ jobs:
           if-no-files-found: error
 
   pre_release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: always()
     needs: [ windows_64, windows_32_xp, linux, macos ]
     steps:
