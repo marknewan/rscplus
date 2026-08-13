@@ -40,4 +40,4 @@ download_packr() {
 export PACKR_EXE="RSCPlus"
 export PACKR_CLASSPATH="rscplus.jar"
 export PACKR_MAIN_CLASS="Client.Launcher"
-export PACKR_VM_ARGS="Xmx1500m DusingBinary=rscplus DbinaryVersion=$BINARY_VERSION"
+export PACKR_VM_ARGS="Xmx1500m Djansi.passthrough=true DusingBinary=rscplus DbinaryVersion=$BINARY_VERSION"
